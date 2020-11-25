@@ -54,7 +54,7 @@ font:
     family: Hack Nerd Font
     style: Italic
   
-  size: 16.5
+  size: 12
 
   use_thin_strokes: true
 
@@ -244,17 +244,15 @@ schemes:
       white:   '#ffffff'
 
 custom_cursor_colors: true
-colors: *one_dark
+colors: *dracula
 
 key_bindings:
-  - { key: Q,      mods: Command,   action: None             }
-  - { key: W,      mods: Command,   action: None             }
-  - { key: 36,     mods: Command,   action: ToggleFullscreen }
+  - { key: V, mods: Control, action: Paste }
+  - { key: C, mods: Control, action: Copy }
 
 shell:
-  program: /usr/local/bin/zsh
-  args:
-    - -l
-    - -c
-    - "tmux"
-
+  program: /usr/bin/zsh
+  #args:
+    #- -l
+    #- -c
+    #- "tmux"
