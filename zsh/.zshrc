@@ -16,7 +16,7 @@ export TERM='screen-256color'
 export NVIM_ROOT="$HOME/dotfiles/nvim"
 export NVIMRC="$NVIM_ROOT/init.vim"
 
-export LANG="en_US.UTF-8"
+#export LANG="en_US.UTF-8"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -43,6 +43,8 @@ fpath+=$HOME/.zsh/pure
 autoload -U promptinit; promptinit
 prompt pure
 ZSH_THEME=""
+
+DISABLE_AUTO_TITLE="true"
 
 # ZSH PLUGINS
 plugins=(
@@ -93,7 +95,13 @@ alias v="nvim"
 alias zshc="nvim ~/.zshrc"
 alias reload="source ~/.zshrc"
 alias settings="nvim ~/.config/nvim/init.vim"
-alias code='open -b com.microsoft.VSCode "$@"'
+
+# For Linux 
+alias code="code-oss"
+
+# For mac
+#alias code='open -b com.microsoft.VSCode "$@"'
+
 alias ls="exa -a -l" 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
