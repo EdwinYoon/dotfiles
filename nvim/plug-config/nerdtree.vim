@@ -8,7 +8,14 @@ let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let NERDTreeShowHidden=1
+let NERDTreeQuitOnOpen=1
+let NERDTreeAutoDeleteBuffer=1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlit
+
+" Open the current buffer file in nerdtree
+nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 
 " Automaticaly close nvim if NERDTree is only thing left open
 autocmd bufenter * if ( winnr( "$" ) == 1 && exists( "b:NERDTree" ) && b:NERDTree.isTabTree() ) | q | endif

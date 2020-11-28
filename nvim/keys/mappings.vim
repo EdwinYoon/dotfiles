@@ -21,6 +21,12 @@ nnoremap <leader>e :edit <C-R>=expand("%:p:h") . "/" <CR>
 nnoremap <leader>S :split <C-R>=expand("%:p:h") . "/" <CR>
 nnoremap <leader>v :vsplit <C-R>=expand("%:p:h") . "/" <CR>
 
+" Buffer switching 
+map <C-k> <C-w><Up>
+map <C-j> <C-w><Down>
+map <C-l> <C-w><Right>
+map <C-h> <C-w><Left>
+
 "Remove search result highlighting
 nmap <silent> <leader>/ :nohlsearch<CR>
 
