@@ -43,20 +43,33 @@ scrolling:
 
 font:
   normal: 
-    family: Cascadia Code
+    family: Consolas
     style: Regular
 
   bold:
-    family: Cascadia Code
-    style: Regular
+    family: Consolas
+    style: Bold
 
   italic: 
-    family: Hack Nerd Font
+    family: Consolas
     style: Italic
   
-  size: 16.5
+  size: 13.0
 
-  use_thin_strokes: true
+  #offset:
+    #x: 0
+    #y: 0
+
+  # Glyph offset determines the locations of the glyphs within their cells with
+  # the default being at the bottom. Increase the x offset to move the glyph to
+  # the right, increase the y offset to move the glyph upward.
+  #glyph_offset:
+    #x: 0
+    #y: 0
+
+  #spacing:
+    #line: 0.0
+    #letter: 0.0
 
 schemes: 
   dracula: &dracula
@@ -244,15 +257,17 @@ schemes:
       white:   '#ffffff'
 
 custom_cursor_colors: true
-colors: *one_dark
+colors: *dracula
 
 key_bindings:
-  - { key: Q,      mods: Command,   action: None             }
-  - { key: W,      mods: Command,   action: None             }
-  - { key: 36,     mods: Command,   action: ToggleFullscreen }
+  #- { key: Q,      mods: Control,   action: None             }
+  #- { key: W,      mods: Control,   action: None             }
+  - { key: 36, mods: Command, action: ToggleFullscreen }
+  - { key: C, mods: Control|Shift,   action: Copy }
+  - { key: V, mods: Control|Shift,   action: Paste }
 
 shell:
-  program: /usr/local/bin/zsh
+  program: /usr/bin/zsh
   #args:
     #- -l
     #- -c

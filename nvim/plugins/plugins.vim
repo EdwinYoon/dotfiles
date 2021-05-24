@@ -25,6 +25,7 @@ call plug#begin( '~/.config/nvim/plugged' )
   Plug 'digitaltoad/vim-pug'
   Plug 'HerringtonDarkholme/yats.vim'
   Plug 'mxw/vim-jsx'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
   "Auto Complition
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -46,6 +47,8 @@ call plug#begin( '~/.config/nvim/plugged' )
   Plug 'terryma/vim-multiple-cursors'
   Plug 'lilydjwg/colorizer'
   Plug 'terryma/vim-smooth-scroll'
+  Plug 'christoomey/vim-tmux-navigator'
+
 
   " Themes
   Plug 'joshdick/onedark.vim'
@@ -56,6 +59,10 @@ call plug#begin( '~/.config/nvim/plugged' )
   Plug 'joshdick/onedark.vim'
   Plug 'dracula/vim', { 'as': 'dracula' }
   Plug 'drewtempelmeyer/palenight.vim'
+  Plug 'sainnhe/sonokai'
+  Plug 'marko-cerovac/material.nvim'
+  Plug 'shaunsingh/nord.nvim'
+
 
   call plug#end()
 

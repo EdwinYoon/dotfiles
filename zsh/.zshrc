@@ -1,5 +1,5 @@
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH" export PATH="$PATH:/usr/local/go/bin"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -16,12 +16,14 @@ export TERM='screen-256color'
 export NVIM_ROOT="$HOME/dotfiles/nvim"
 export NVIMRC="$NVIM_ROOT/init.vim"
 
+# Language Setup
 export LANG="en_US.UTF-8"
+#export GTK_IM_MODULE=ibus
+#export XMODIFIERS=@im=ibus
+#export QT_IM_MODULE=ibus
+#ibus-daemon -drx
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
+DISABLE_AUTO_TITLE="true"
 export KEYTIMEOUT=5           # Reduce the delay after you press <ESC>
 
 HISTSIZE=10000
@@ -29,6 +31,11 @@ SAVEHIST=10000
 
 # Alacritty Completion and functions path
 fpath+=$HOME/.zsh/.zsh_functions
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 
 # PURE PROMPT SETUP
 fpath+=$HOME/.zsh/pure
@@ -40,7 +47,7 @@ ZSH_THEME=""
 plugins=(
   git
   colored-man-pages
-  vi-mode
+  zsh-vi-mode
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
@@ -77,16 +84,15 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases 
 alias alac="nvim ~/.config/alacritty/alacritty.yml"
-alias debug_alac="RUST_BACKTRACE=1 /Applications/Alacritty.app/Contents/MacOS/alacritty -vvv"
-
-alias tmux_clean="tmux kill-server"
-
-alias v="nvim"
-alias zshc="nvim ~/.zshrc"
+alias code='open -b com.microsoft.VSCode "$@"'
+alias debug_alac="RUST_BACKTRACE=1 alacritty -vvv"
+alias ls="exa -a -l" 
+alias open="xdg-open"
 alias reload="source ~/.zshrc"
 alias settings="nvim ~/.config/nvim/init.vim"
-alias code='open -b com.microsoft.VSCode "$@"'
-alias ls="exa -a -l" 
+alias tmux_clean="tmux kill-server"
+alias v="nvim"
+alias zshc="nvim ~/.zshrc"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

@@ -114,7 +114,7 @@ set noswapfile
 set timeoutlen=300
 
 " Copy paste between vim and everything else
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 
 "Render empty space and new line as $ 
 set list listchars=tab:>\ ,trail:-,eol:$
@@ -131,7 +131,7 @@ autocmd FileType * set formatoptions-=cro
 autocmd FileTYpe * setlocal indentkeys-=<:>
 
 " Add empty line at the end of file when writing a file like other vscode  
-autocmd BufWritePre * if (getline('$') !~ "^\s*$") | call append(line('$'), "") | endif
+"autocmd BufWritePre * if (getline('$') !~ "^\s*$") | call append(line('$'), "") | endif
 
 " Reload icons after init source
 if exists('g:loaded_webdevicons')
