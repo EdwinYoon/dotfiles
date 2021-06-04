@@ -1,5 +1,6 @@
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-export PATH="$HOME/.cargo/bin:$PATH" export PATH="$PATH:/usr/local/go/bin"
+export PATH="$HOME/.cargo/bin:$PATH" 
+export PATH="$PATH:/usr/local/go/bin"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -8,23 +9,21 @@ export ZSH="$HOME/.oh-my-zsh"
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
-export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
-export GATA_ROOT="$HOME/gataweb"
+export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'" export GATA_ROOT="$HOME/gataweb"
 export TERM='screen-256color'
 
 # NVIMRC PATH
 export NVIM_ROOT="$HOME/dotfiles/nvim"
 export NVIMRC="$NVIM_ROOT/init.vim"
+export ONELOCAL_ROOT="$HOME/onelocal"
 
 # Language Setup
 export LANG="en_US.UTF-8"
-#export GTK_IM_MODULE=ibus
-#export XMODIFIERS=@im=ibus
-#export QT_IM_MODULE=ibus
-#ibus-daemon -drx
+
+# Reduce the delay after you press <ESC>
+export KEYTIMEOUT=5           
 
 DISABLE_AUTO_TITLE="true"
-export KEYTIMEOUT=5           # Reduce the delay after you press <ESC>
 
 HISTSIZE=10000
 SAVEHIST=10000
@@ -52,9 +51,17 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+function zvm_after_init() {
+  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+}
+
 # Auto ls after cd 
 function chpwd() {
   exa -a -l 
+}
+
+function gata() {
+  sh "$ONELOCAL_ROOT/onelocal_platform_local.sh"
 }
 
 # Read .nvmrc after change directory
@@ -84,7 +91,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases 
 alias alac="nvim ~/.config/alacritty/alacritty.yml"
-alias code='open -b com.microsoft.VSCode "$@"'
+#alias code='open -b com.microsoft.VSCode "$@"'
 alias debug_alac="RUST_BACKTRACE=1 alacritty -vvv"
 alias ls="exa -a -l" 
 alias open="xdg-open"
@@ -95,4 +102,3 @@ alias v="nvim"
 alias zshc="nvim ~/.zshrc"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-

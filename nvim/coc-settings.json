@@ -3,9 +3,12 @@
   "tslint.autoFixOnSave": false,
   "tslint.alwaysShowRuleFailuresAsWarnings": true,
   "eslint.enable": false,
-
-  // RUST
-  "rust-analyzer.cargo-watch.enable": false
-  //"rust-analyzer.serverPath": "/home//.cargo-target/release/rust-analyzer"
+  "languageserver": {
+    "rust": {
+      "command": "rust-analyzer",
+      "filetypes": ["rust"],
+      "rootPatterns": ["Cargo.toml"]
+    }
+  }
 }
 

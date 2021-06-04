@@ -1,13 +1,15 @@
-
+"General Settings
 source $NVIM_ROOT/general/settings.vim
 
 if exists('g:vscode')
-   VS Code extension
+  "VS Code extension
   source $HOME/.config/nvim/vscode/settings.vim
   source $HOME/.config/nvim/plug-config/easymotion.vim
 else
   "Plugins
   source $NVIM_ROOT/plugins/plugins.vim
+
+  "Plugin Configs
   source $NVIM_ROOT/plug-config/coc.vim
   source $NVIM_ROOT/plug-config/fzf.vim
   source $NVIM_ROOT/plug-config/nerdtree.vim
@@ -17,12 +19,13 @@ else
 
   "Key mappings
   source $NVIM_ROOT/key-mappings/general.vim
-  "source $NVIM_ROOT/themes/airline.vim
-  "source $NVIM_ROOT/themes/sonokai.vim
-  "source $NVIM_ROOT/themes/onedark.vim
 
+  "Themes
+  source $NVIM_ROOT/themes/airline.vim
+  source $NVIM_ROOT/themes/sonokai.vim
+  "source $NVIM_ROOT/themes/onedark.vim
   "source $NVIM_ROOT/themes/seoul256.vim
-  source $NVIM_ROOT/themes/palenight.vim
+  "source $NVIM_ROOT/themes/palenight.vim
 endif
 
 lua <<EOF

@@ -117,7 +117,7 @@ set timeoutlen=300
 set clipboard+=unnamedplus
 
 "Render empty space and new line as $ 
-set list listchars=tab:>\ ,trail:-,eol:$
+"set list listchars=tab:>\ ,trail:-,eol:$
 
 "Vue
 let g:vue_disable_pre_processors = 1
