@@ -1,0 +1,102 @@
+{
+    // This file shuold be placed in $HOME/.config/code/User/settings.json
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "'JetBrains Mono', 'Consolas', 'Fantasque Sans Mono', 'Iosevka', 'Fira Code', 'Monoid', 'Cascadia Code', 'Menlo, Monaco', 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "window.zoomLevel": 1.5,
+    "editor.formatOnSave": false,
+    "editor.minimap.showSlider": "always",
+    "workbench.tree.indent": 10,
+    "workbench.editor.highlightModifiedTabs": true,
+    "editor.tabSize": 2,
+    "workbench.settings.useSplitJSON": true,
+    "workbench.settings.editor": "json",
+    "editor.cursorBlinking": "phase",
+    "gitlens.codeLens.recentChange.enabled": false,
+    "gitlens.codeLens.authors.enabled": false,
+    "rust.mode": "rls",
+    "rust.rustup": {
+        "toolchain": "stable-x86_64-apple-darwin",
+        "nightlyToolchain": "nightly-x86_64-apple-darwin"
+    },
+    "workbench.sideBar.location": "right",
+    "rust.rls": {
+        "useRustfmt": true
+    },
+    "workbench.panel.defaultLocation": "right",
+    "editor.minimap.enabled": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "terminal.integrated.fontSize": 15,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true,
+    "vim.leader": ",",
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [ ":" ],
+            "commands": [ "workbench.action.showCommands" ]
+        },
+        {
+            "before": [ "<leader>", "." ],
+            "commands": [ ":nohl" ]
+        },
+        {
+            "before": [ "<leader>", "m" ],
+            "commands": [ "bookmarks.toggle" ]
+        },
+        {
+            "before": [ "<leader>", "b" ],
+            "commands": [ "bookmarks.list" ]
+        },
+        {
+            "before": [ "<leader>", "v" ],
+            "commands": [ "workbench.action.splitEditor" ]
+        },
+        {
+            "before": [ "<leader>", "s" ],
+            "commands": [
+                "workbench.action.files.save",
+            ]
+        },
+        {
+            "before": [ "<leader>", " " ],
+            "commands": [ "workbench.action.terminal.toggleTerminal" ]
+        },
+    ],
+    "vim.handleKeys": {
+        "<C-d>": true,
+        "<C-k>": true,
+        "<C-j>": true,
+    },
+    "workbench.colorTheme": "GitHub Dark",
+    "workbench.editor.wrapTabs": true,
+    "cSpell.userWords": [
+        "datadog"
+    ],
+    "emmet.showExpandedAbbreviation": "never",
+    // "workbench.activityBar.visible": false,
+    "search.mode": "reuseEditor",
+    "search.searchEditor.doubleClickBehaviour": "openLocationToSide",
+    "zenMode.hideLineNumbers": false,
+}
