@@ -97,7 +97,7 @@
     "when": "notebookEditorFocused"
   },
   {
-    "key": "shift+k",
+    "key": "ctrl+shift+k",
     "command": "editor.action.showHover",
     "when": "editorTextFocus"
   },
@@ -114,7 +114,7 @@
     "command": "workbench.action.files.save"
   },
   {
-    "key": "alt+b",
+    "key": "ctrl+b",
     "command": "workbench.action.toggleSidebarVisibility"
   },
   {
@@ -146,7 +146,7 @@
     "command": "workbench.action.showCommands"
   },
   {
-    "key": "shift+alt+f",
+    "key": "ctrl+shift+f",
     "command": "workbench.action.findInFiles"
   },
   {
@@ -158,7 +158,7 @@
     "command": "workbench.action.selectTheme"
   },
   {
-    "key": "alt+w",
+    "key": "ctrl+w",
     "command": "workbench.action.closeWindow",
     "when": "!editorIsOpen && !multipleEditorGroups"
   },
@@ -168,7 +168,7 @@
     "when": "!editorIsOpen && !multipleEditorGroups"
   },
   {
-    "key": "alt+w",
+    "key": "ctrl+w",
     "command": "workbench.action.closeActiveEditor"
   },
   {
@@ -176,7 +176,7 @@
     "command": "-workbench.action.closeActiveEditor"
   },
   {
-    "key": "alt+\\",
+    "key": "ctrl+\\",
     "command": "workbench.action.splitEditor"
   },
   {
@@ -184,7 +184,7 @@
     "command": "-workbench.action.splitEditor"
   },
   {
-    "key": "alt+f",
+    "key": "ctrl+f",
     "command": "actions.find",
     "when": "editorFocus || editorIsOpen"
   },
@@ -194,7 +194,7 @@
     "when": "editorFocus || editorIsOpen"
   },
   {
-    "key": "alt+f",
+    "key": "ctrl+f",
     "command": "settings.action.search",
     "when": "inSettingsEditor"
   },
@@ -204,7 +204,7 @@
     "when": "inSettingsEditor"
   },
   {
-    "key": "alt+f",
+    "key": "ctrl+f",
     "command": "repl.action.filter",
     "when": "inDebugRepl && textInputFocus"
   },
@@ -214,7 +214,7 @@
     "when": "inDebugRepl && textInputFocus"
   },
   {
-    "key": "alt+f",
+    "key": "ctrl+f",
     "command": "workbench.action.terminal.focusFind",
     "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
   },
@@ -265,11 +265,35 @@
     "when": "suggestWidgetVisible"
   },
   {
-    "key": "alt+c",
+    "key": "ctrl+c",
     "command": "editor.action.clipboardCopyAction"
   },
   {
-    "key": "alt+v",
+    "key": "ctrl+v",
     "command": "editor.action.clipboardPasteAction"
+  },
+  {
+    "key": "ctrl+z",
+    "command": "undo"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "gitlens.toggleFileBlame",
+    "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /blameable/"
+  },
+  {
+    "key": "alt+b",
+    "command": "-gitlens.toggleFileBlame",
+    "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /blameable/"
+  },
+  {
+    "key": "ctrl+shift+f",
+    "command": "filesExplorer.findInFolder",
+    "when": "explorerResourceIsFolder && explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "shift+alt+f",
+    "command": "-filesExplorer.findInFolder",
+    "when": "explorerResourceIsFolder && explorerViewletVisible && filesExplorerFocus && !inputFocus"
   }
 ]

@@ -1,10 +1,9 @@
 {
     // This file shuold be placed in $HOME/.config/code/User/settings.json
     "workbench.iconTheme": "material-icon-theme",
-    "editor.fontFamily": "'JetBrains Mono', 'Consolas', 'Fantasque Sans Mono', 'Iosevka', 'Fira Code', 'Monoid', 'Cascadia Code', 'Menlo, Monaco', 'Courier New', monospace",
+    "editor.fontFamily": "'Fantasque Sans Mono', 'JetBrains Mono', 'Consolas', 'Iosevka', 'Fira Code', 'Monoid', 'Cascadia Code', 'Menlo, Monaco', 'Courier New', monospace",
     "editor.fontLigatures": true,
-    "editor.fontSize": 14,
-    "window.zoomLevel": 1.5,
+    "editor.fontSize": 15,
     "editor.formatOnSave": false,
     "editor.minimap.showSlider": "always",
     "workbench.tree.indent": 10,
@@ -15,15 +14,7 @@
     "editor.cursorBlinking": "phase",
     "gitlens.codeLens.recentChange.enabled": false,
     "gitlens.codeLens.authors.enabled": false,
-    "rust.mode": "rls",
-    "rust.rustup": {
-        "toolchain": "stable-x86_64-apple-darwin",
-        "nightlyToolchain": "nightly-x86_64-apple-darwin"
-    },
     "workbench.sideBar.location": "right",
-    "rust.rls": {
-        "useRustfmt": true
-    },
     "workbench.panel.defaultLocation": "right",
     "editor.minimap.enabled": false,
     "editor.codeActionsOnSave": {
@@ -89,7 +80,7 @@
         "<C-k>": true,
         "<C-j>": true,
     },
-    "workbench.colorTheme": "GitHub Dark",
+    "workbench.colorTheme": "One Monokai",
     "workbench.editor.wrapTabs": true,
     "cSpell.userWords": [
         "datadog"
@@ -99,4 +90,5 @@
     "search.mode": "reuseEditor",
     "search.searchEditor.doubleClickBehaviour": "openLocationToSide",
     "zenMode.hideLineNumbers": false,
+    "editor.renderIndentGuides": true,
 }
